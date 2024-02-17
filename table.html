@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+  <title>
+  table
+  </title>
+  <style>
+  #calc{
+    border : 1px solid rgb(187, 183, 183);
+    border-radius: 8px;
+    width: 220px;
+    font-size: 45px;
+    }
+    #name{
+      margin :10px ;
+      width: 85%;
+      font-size: 25px;
+
+    }
+    .button{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .b{
+      width: 50px;
+      height: 40px;
+      margin :3px;
+       
+    }
+  </style>
+</head>
+<body>
+     <div id="calc">
+      <input type="text" id = "name"> 
+     <div class="button"> 
+      <button class="b" onclick="currInput = currInput+ '1';
+       document.querySelector('#name').value = currInput;">1</button>
+
+      <button class="b"  onclick="currInput = currInput+ '2';
+      document.querySelector('#name').value = currInput;">2</button>
+
+      <button class="b" onclick="currInput = currInput+ '3';
+      document.querySelector('#name').value = currInput;">3</button>
+
+      <button class="b" onclick="currInput = currInput+ '4';
+      document.querySelector('#name').value = currInput;">4</button>
+
+      <button class="b" onclick="currInput = currInput+ '5';
+      document.querySelector('#name').value = currInput;">5</button>
+
+      <button class="b" onclick="currInput = currInput+ '6';
+      document.querySelector('#name').value = currInput;">6</button>
+
+      <button class="b" onclick="currInput = currInput+ '7';
+      document.querySelector('#name').value = currInput;">7</button>
+
+      <button class="b" onclick="currInput = currInput+ '8';
+      document.querySelector('#name').value = currInput;">8</button>
+
+      <button class="b" onclick="currInput = currInput+ '9';
+      document.querySelector('#name').value = currInput;">9</button>
+
+      <button class="b"onclick="currInput =  currInput+ '+';
+      document.querySelector('#name').value = currInput;">+</button>
+
+      <button class="b" onclick="currInput = currInput+ '0';
+      document.querySelector('#name').value = currInput;">0</button>
+
+      <button class="b" onclick="currInput = currInput+ '-';
+      document.querySelector('#name').value = currInput;">-</button>
+
+      <button class="b" onclick="currInput = currInput+ '%';
+      document.querySelector('#name').value = currInput;">%</button>
+      
+      <button class="b" onclick="currInput = currInput + '*';
+      document.querySelector('#name').value = currInput;">*</button>
+
+      <button class="b" onclick="currInput = currInput + '/';
+      document.querySelector('#name').value = currInput;">/</button>
+
+      <button class="b" onclick="currInput = '';
+      document.querySelector('#name').value = currInput;">c</button>
+
+      <button class="b" onclick="
+        let result = eval(currInput);
+      currInput = result;
+      document.querySelector('#name').value = currInput;">=</button>
+    </div>
+     </div>
+      <script>
+        let currInput = '';
+         document.querySelector('#name').value = currInput;
+      </script>       
+</body>
